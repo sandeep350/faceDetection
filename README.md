@@ -75,8 +75,4 @@ This project implements real-time face detection using OpenCV and a webcam. It u
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
 
----
-
-Let me know if you want a version tailored for Windows or with `CMakeLists.txt` for a CMake build!
