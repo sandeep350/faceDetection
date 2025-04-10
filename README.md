@@ -62,6 +62,37 @@ This project implements real-time face detection using OpenCV and a webcam. It u
 
 - Make sure the file `haarcascade_frontalface_default.xml` is present in the same directory as the code or provide the correct path to it.
 - Press **Esc** key to exit the detection window.
+Sure! Here's a more detailed yet still concise and clear version for your README file:
+
+---
+
+### 🔍 How the Face Detection Algorithm Works
+
+1. **Capture Video from Webcam**  
+   - Uses OpenCV’s `VideoCapture` to access the webcam and read frames in real-time.
+
+2. **Convert Frame to Grayscale**  
+   - Each frame is converted to grayscale using `cv2.cvtColor()`.  
+   - This simplifies the image and reduces computational load since the Haar Cascade works on intensity rather than color.
+
+3. **Load Haar Cascade Classifier**  
+   - A pre-trained XML classifier (`haarcascade_frontalface_default.xml`) is loaded using `cv2.CascadeClassifier()`.  
+   - This classifier has been trained on thousands of face images to recognize common facial features.
+
+4. **Face Detection with `detectMultiScale()`**  
+   - The classifier scans the grayscale image at multiple scales to detect faces of various sizes.  
+   - Parameters like `scaleFactor`, `minNeighbors`, and `minSize` help fine-tune detection accuracy and speed.
+
+5. **Draw Rectangles Around Faces**  
+   - For every detected face, a rectangle is drawn on the original frame using `cv2.rectangle()` to visually highlight faces.
+
+6. **Count and Display Number of Faces**  
+   - The number of faces detected in the current frame is counted using `len(faces)` and displayed using `cv2.putText()`.
+
+7. **Real-Time Loop**  
+   - Steps 2 to 6 repeat continuously for each frame until the user exits (usually by pressing a key like 'q').
+
+---
 
 ## 📸 Screenshot
 
