@@ -1,94 +1,82 @@
-### 🚌 Bus Booking System in C
+### Face Detection using OpenCV
 
-A simple command-line-based Bus Booking System developed in C that allows users to book seats, view reservations, edit bookings, and print tickets. Data persistence is implemented through file handling.
+This project implements real-time face detection using OpenCV and a webcam. It uses a Haar Cascade Classifier to detect human faces and displays the count of faces detected in each frame.
 
-## 📌 Features
+## 🔍 Features
 
-- Book seats (up to 30 maximum)
-- View all current reservations
-- Edit existing reservations
-- Print a ticket for a specific seat
-- Save and load data using binary file I/O (`bookings.dat`)
+- Real-time face detection using your system's webcam.
+- Face count displayed on screen.
+- Visual feedback with rectangles drawn around detected faces.
+- Lightweight and easy to run.
 
-## 🛠️ Tech Stack
+## 🖥️ Demo
 
-- Language: C
-- Compiler: GCC (or any standard C compiler)
-- File Handling: Binary read/write (`fopen`, `fread`, `fwrite`)
+![image](https://github.com/user-attachments/assets/a5d3912c-aa2c-431c-bffa-74fb79977037)
 
-## 📂 Project Structure
+
+## 🛠️ Technologies Used
+
+- C++
+- OpenCV (v4.x or compatible)
+- Haarcascade XML file for frontal face detection
+
+## 📂 File Structure
 
 ```
 .
-├── main.c               # Source code for Bus Booking System
-├── bookings.dat         # Auto-generated file storing reservations
-└── README.md            # Project documentation
+├── haarcascade_frontalface_default.xml
+├── main.cpp
+└── README.md
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-Make sure you have a C compiler like GCC installed:
+- C++ compiler (like g++)
+- OpenCV installed on your system
+- Webcam
 
-```bash
-gcc --version
-```
+### Installation
 
-### Compilation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/face-detection-opencv.git
+   cd face-detection-opencv
+   ```
 
-To compile the code:
+2. **Make sure OpenCV is installed**
+   You can install OpenCV using package managers like `vcpkg`, `apt`, or build from source.
 
-```bash
-gcc main.c -o bus_booking
-```
+3. **Build the project**
+   ```bash
+   g++ main.cpp -o FaceDetection `pkg-config --cflags --libs opencv4`
+   ```
 
-### Run the Program
+4. **Run the program**
+   ```bash
+   ./FaceDetection
+   ```
 
-```bash
-./bus_booking
-```
+## 📁 Notes
 
-## 🔧 How to Use
+- Make sure the file `haarcascade_frontalface_default.xml` is present in the same directory as the code or provide the correct path to it.
+- Press **Esc** key to exit the detection window.
 
-- Choose from the menu:
-  - **1:** Book a new seat (checks if already taken)
-  - **2:** View all existing reservations
-  - **3:** Edit reservation by entering seat number
-  - **4:** Print ticket for a specific seat
-  - **5:** Exit the program
+## 📸 Screenshot
 
-Data is automatically saved and loaded from `bookings.dat`.
+![image](https://github.com/user-attachments/assets/e991d044-8f4e-4201-8b0e-b57c2d93cf13)
 
-## 🗃️ File Handling Notes
 
-The program uses binary files (`bookings.dat`) to:
-- Save all reservations when a seat is booked or edited
-- Load existing reservations on startup
+## 💡 Credits
 
-## 📎 Limitations
+- Haar cascade file by OpenCV contributors: [Link](https://github.com/opencv/opencv/tree/master/data/haarcascades)
 
-- Supports a maximum of **30 seats**
-- Basic input validation only
-- Not thread-safe (single-user, single-thread)
+## 📝 License
 
-## 📈 Future Improvements
-
-- Add cancellation feature
-- Include date & time of travel
-- Upgrade to graphical UI or web-based interface
-- Enhance validation and error handling
-
-## 🧑‍💻 Author
-
-Developed by [Your Name].  
-Feel free to contribute, report issues, or suggest improvements!
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
 ---
 
-Let me know if you'd like this converted into a visually enhanced version (with badges, images, etc.), or if you're planning to expand it into a face detection project — I noticed your last line mentioned that!
+Let me know if you want a version tailored for Windows or with `CMakeLists.txt` for a CMake build!
