@@ -103,7 +103,4 @@ Sure! Here's a more detailed yet still concise and clear version for your README
 
 - Haar cascade file by OpenCV contributors: [Link](https://github.com/opencv/opencv/tree/master/data/haarcascades)
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
