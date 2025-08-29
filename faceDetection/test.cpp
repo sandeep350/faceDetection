@@ -8,7 +8,7 @@ using namespace std;
 using namespace cv;
 
 int main() {
-    // Open the default webcam
+    // To Open the default webcam
     VideoCapture video(0);
     if (!video.isOpened()) {
         cout << "Error: Could not open the camera!" << endl;
