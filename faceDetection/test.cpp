@@ -15,7 +15,7 @@ int main() {
         return -1;
     }
 
-    // Load the Haar cascade for face detection
+    // To Load the Haar cascade for face detection
     CascadeClassifier facedetect;
     string cascadePath = "haarcascade_frontalface_default.xml"; // Ensure this file is in the correct path
     if (!facedetect.load(cascadePath)) {
