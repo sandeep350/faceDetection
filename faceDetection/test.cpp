@@ -40,7 +40,7 @@ int main() {
         vector<Rect> faces;
         facedetect.detectMultiScale(gray, faces, 1.1, 3, 0, Size(30, 30));
 
-        // Draw rectangles around detected faces
+        // To Draw rectangles around detected faces
         for (size_t i = 0; i < faces.size(); i++) {
             rectangle(img, faces[i].tl(), faces[i].br(), Scalar(50, 50, 255), 3);
         }
