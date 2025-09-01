@@ -36,7 +36,7 @@ int main() {
         Mat gray;
         cvtColor(img, gray, COLOR_BGR2GRAY);
 
-        // Detect faces
+        // For Detecting faces
         vector<Rect> faces;
         facedetect.detectMultiScale(gray, faces, 1.1, 3, 0, Size(30, 30));
 
